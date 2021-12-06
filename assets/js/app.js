@@ -48,3 +48,62 @@ function nextQuestion() {
 
 document.getElementById('start').addEventListener('click',handleClick);
 
+function populateQuestions(index){
+
+    var text1 = document.querySelector("#text");
+    var options = document.querySelector(".option");
+    
+    text1.innerHTML=questions[index].question
+
+    var listEl = document.createElement('ul');
+
+
+    options.append(listEl);
+
+
+    for (let i = 0; i < questions[index].choices.length; i++) {
+        var listTag = document.createElement('li');
+        var buttonEl = document.createElement('button');
+
+        buttonEl.innerHTML=questions[index].choices[i]
+
+        buttonEl.classList.add("choices");
+
+        listTag.append(buttonEl);
+        listEl.append(listTag);
+
+        if (i === questions[index].answer) {
+            buttonEl.classList.add("correct");
+        }else {
+
+        }
+
+    };
+
+    var choices1 = [...document.querySelectorAll(".choices")];
+
+
+
+
+    for (let i = 0; i < choices1.length; i++) {
+
+        choices1[i].addEventListener('click', function(event){
+            if (this.classList.contains('correct')){  
+                this.classList.add('correct-choice');
+
+
+            }else{
+                this.classList.add('incorrect-choice')};
+        });
+       
+    }
+
+    questionIndex++;
+
+    
+};
+
+
+
+//clear the questions re-do it and add the timer. keep track the score. 
+
