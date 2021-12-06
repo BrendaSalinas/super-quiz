@@ -1,0 +1,79 @@
+body{
+    background-color: lightgrey;
+    font-family: monospace;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 10%;
+    background-color: #fff;
+    padding: 5%;
+    border-radius: 12px;
+    border: 2px solid black;
+    font-family: monospace;
+
+}
+#main {
+    text-align: center;
+}
+
+button {
+    background-color: purple;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 5px 5px 10px grey;
+    flex-direction: column;
+    font-family: monospace;
+
+}
+
+button:hover{
+    cursor: pointer;
+    opacity: .85;
+}
+
+button:active{
+    box-shadow: none;
+    transform: scale(.9);
+}
+
+#qDiv {
+    margin: 0 auto;
+    display: none;
+}
+
+#answers {
+    margin: 10% 20%;
+}
+#timer_sec{
+    text-align: center;
+    border: 15px solid black;
+    width: 12%;
+    margin: 0 auto;
+    margin-top: 2%;
+    border-radius: 20px;
+    background-color:black;
+    color: white;
+    font-size: 18px;
+}
+
+span {
+    margin: 4%;
+    font-size: 27px;
+
+}
+
+.correct-choice{
+    background-color: green;
+}
+
+.incorrect-choice{
+    background-color:red;
+}
+
+#text{
+    font-size: 1.5rem;
+    font: bold;
+}
+
