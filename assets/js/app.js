@@ -107,3 +107,20 @@ function populateQuestions(index){
 
 //clear the questions re-do it and add the timer. keep track the score. 
 
+//set up the timer 
+var time = "60 sec";
+var time1 = document.getElementById("timer_sec");
+
+function timer(){
+
+    time = time-1;
+    if (time<60){
+        time1.innerHTML = time + " sec";
+    }
+
+    if (time<1){
+        window.clearInterval(update);
+    }
+};
+
+update = setInterval("timer()", 1000);
