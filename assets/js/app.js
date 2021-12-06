@@ -32,3 +32,19 @@ var questions = [
     }
 ];
 
+//click the button "START and go the next window"
+var questionIndex = 0;
+function handleClick() {
+    time = 60; 
+    document.getElementById('main').style.display = 'none';
+    document.getElementById('qDiv').style.display = 'block';
+    populateQuestions(questionIndex);
+};
+
+
+function nextQuestion() {
+    document.getElementById('question_1').style.display = 'none';
+}
+
+document.getElementById('start').addEventListener('click',handleClick);
+
